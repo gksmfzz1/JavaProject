@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Variables {
 	public static void main(String[] args) {
 		/*
-		 * 자바 기본자료형 int : 정수 (byte, short, long) double : 상수 (float) char : 문자 String :
+		 * 자바 기본자료형 int : 정수 (byte, short, long) double : 수 (float) char : 문자 String :
 		 * 문자열
 		 */
 		// 변수 : 자료형 변수이름;
