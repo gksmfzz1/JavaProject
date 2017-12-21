@@ -2,7 +2,7 @@ package LeeHaNeul.lab;
 
 public class SungJukV0 {
 
-	// V0 클래스 - value object
+	// VO 클래스 - value object
 	// 값만 저장하는 특수한 클래스
 
 	// 멤버변수 (private 으로 선언!!)

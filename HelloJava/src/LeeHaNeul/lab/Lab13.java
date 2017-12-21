@@ -6,11 +6,11 @@ public class Lab13 {
 
 		// #37
 
-		Person ps = new Person("하늘", "경기 오산시", "010-0000-0000");
+		Person ps = new Person();
 		System.out.println(ps);
 
-		Customer1 cs = new Customer1("하늘", "경기 오산시", "010-0000-0000", "1", 0);
-		System.out.println(cs);
+		Customer1 cs = new Customer1("하늘", "경기 오산시", "010-0000-0000", "1", 0); // 생성된 객체의 괄호안에 매개변수를 초기화해서
+		System.out.println(cs); // 값을 출력할 수도 있다
 
 		// #38
 
@@ -27,6 +27,7 @@ public class Lab13 {
 
 		SmartPhone sp = new SmartPhone("애플", "100만원", "4G", "ios10", "256GB", true, true);
 		System.out.println(sp);
+
 	}
 
 }
@@ -37,7 +38,7 @@ class Person {
 	private String phoneNum;
 
 	public Person() {
-
+		this("하늘", "경기 오산시", "010-0000-0000"); // this를 이용해서 생성된 객체에 초기화 값을 넣어줌
 	}
 
 	public Person(String name, String addr, String phoneNum) {
@@ -45,7 +46,7 @@ class Person {
 		this.name = name;
 		this.addr = addr;
 		this.phoneNum = phoneNum;
-	}
+	} // 멤버변수를 초기화 시키는 생성자
 
 	public String getName() {
 		return name;
@@ -74,7 +75,7 @@ class Person {
 	@Override
 	public String toString() {
 		return "Person [name=" + name + ", addr=" + addr + ", phoneNum=" + phoneNum + "]";
-	}
+	} // 생성된 객체값을 출력
 }
 
 class Customer1 {
@@ -301,14 +302,14 @@ class SmartPhone {
 	private String os;
 	private String memory;
 
-	private Boolean isCamera;
-	private Boolean isBluetooth;
+	private boolean isCamera;
+	private boolean isBluetooth;
 
 	public SmartPhone() {
 
 	}
 
-	public SmartPhone(String company, String price, String comType, String os, String memory, Boolean Camera,
+	public SmartPhone(String company, String price, String comType, String os, String memory, boolean Camera,
 			Boolean Bluetooth) {
 		super();
 		this.company = company;
