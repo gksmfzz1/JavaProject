@@ -11,6 +11,14 @@ public class Interfaces {
 		sjsrv.getAverage();
 		sjsrv.getGrade();
 		
+		//	인터페이스 타입 변환 (업/다운 캐스팅)
+		//	인터페이스의 참조변수로 구현한 클래스의 객체를 할당 할 수 있음
+		ISungJukService isjsrv = new SungJukServiceImpl();
+		
+		
+		
+		
+		
 		// 추상클래스 객체 생성
 		// 추상메서드를 포함한 클래스 - 객체화 불가능
 //		AbstractClass ac = new AbstractClass();
@@ -23,12 +31,12 @@ public class Interfaces {
 }
 
 interface ISungJukService {
-	int tot = 0;		// 상수이기 때문에 초기화를 꼭 해줘야 함!
-	double avg = 0.0;
+	int TOT = 0;		// 상수이기 때문에 초기화를 꼭 해줘야 함!
+	double AVG = 0.0;		// 인터페이스의 필드이름은 대문자로 작성
 	
 	
-	abstract void getTotal();		// 추상메서드
-	
+	abstract void getTotal();		// 추상메서드	(public, abstract)
+									// 추상메서드는 몸통을 가질 수 없음 {}
 	void getAverage();
 	
 	void getGrade();

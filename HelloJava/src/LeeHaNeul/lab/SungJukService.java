@@ -2,7 +2,7 @@ package LeeHaNeul.lab;
 
 public class SungJukService {
 
-	private int tot = 0;
+	private int tot = 0;			
 	private double avg = 0;
 	private String grd = "가";
 
