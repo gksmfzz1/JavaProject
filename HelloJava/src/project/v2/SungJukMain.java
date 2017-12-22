@@ -85,12 +85,42 @@ public class SungJukMain {
 	private static void showOneSungJuk() {
 		int no = 0;
 		sjsrv.getSungJuk(no);
+		StringBuffer sb = new StringBuffer();
+		sb.append("\n 검색할 성적번호를 입력하세요")
+		.append("\n>>");
+		System.out.println(sb.toString());
 		
+		Scanner sc = new Scanner(System.in);
+		int pos =  sc.nextInt();
+		
+		sb.setLength(0);
+		sb.append("\n\n-= 상세 성적 데이터 =- ")
+		.append(sjsrv.getSungJuk(pos))
+		.append("\n\n\n");
+		
+		System.out.println(sb.toString());
 	}
 
 	private static void updateSungJuk() {
-		sjsrv.modifySungJuk(null, 0);
+
+		StringBuffer sb = new StringBuffer();
+		sb.append("\n\n수정할 성적번호를 입력하세요");
+		System.out.println(sb.toString());
 		
+		Scanner sc = new Scanner(System.in);
+		int no = sc.nextInt();
+		
+		sb.setLength(0);
+		sb.append("\n수정할 성적데이터를 입력하세요")
+		.append("\n데이터 입력순서는 이름/국어/영어/수학 입니다")
+		.append("\n예) 혜교 45 98 32")
+		.append("\n>>");
+		System.out.println(sb.toString());
+		
+		SungJukVO sj = new SungJukVO(sc.next(),sc.nextInt(),sc.nextInt(),sc.nextInt());
+		
+		sjsrv.modifySungJuk(sj, no);
+				
 	}
 
 	private static void deleteSungJuk() {

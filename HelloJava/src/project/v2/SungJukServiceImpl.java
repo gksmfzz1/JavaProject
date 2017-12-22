@@ -31,18 +31,48 @@ public class SungJukServiceImpl implements SungJukService {
 
 	@Override
 	public String getSungJuk(int no) {
-		return "";
+		if ( checkSungJukNo(no, sjdb.size()))
+		return "\n 잘못된 값 입력!!";
 		
+		SungJukVO sj = sjdb.get(no -1);
+		
+		StringBuffer sb = new StringBuffer();
+					sb.append(String.format("\n\n%d : %s %d %d %d %d %.1f %s"
+							, no , 
+							sj.getName(),sj.getKor(),sj.getEng(),sj.getMat(),
+							sj.getTot(),
+							sj.getAvrg(),
+							sj.getGrd()));
+					
+					return sb.toString();
 	}
 
+	private boolean checkSungJukNo(int no, int size) {
+		boolean isfail = false;
+		if ( no <= 0 || (no > size)) {
+			isfail = true;
+		}
+		return isfail;
+	}
 	@Override
 	public void modifySungJuk(SungJukVO sj, int no) {
+		if ( checkSungJukNo(no  , sjdb.size())) {
+			System.out.println("\n잘못입력하셨습니다!!\n\n\n");
+			return;
+		}
 		
+		processSungJuk(sj);
+		sjdb.set(no -1 , sj);
 	}
 
 	@Override
 	public void removeSungJuk(int no) {
+		 if(checkSungJukNo(no,sjdb.size())) {
+			 System.out.println("\n잘못입력하셨습니다!!\n\n\n");
+			 return;
+		 }
 		 
+		 sjdb.remove(no -1);
 	}
 
 	private void processSungJuk(SungJukVO sj) {			//addSungJuk 에 포함될 것이기 때문에 보일 필요X
