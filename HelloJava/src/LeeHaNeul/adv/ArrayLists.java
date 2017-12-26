@@ -7,7 +7,7 @@ import java.util.List;
 import project.v1.SungJukVO;
 
 public class ArrayLists {
-
+	@SuppressWarnings ({ "unchecked", "rawtypes", "unused" })
 	public static void main(String[] args) {
 		
 		//배열

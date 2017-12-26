@@ -1,5 +1,6 @@
 package LeeHaNeul.adv;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -7,6 +8,7 @@ import project.v1.SungJukVO;
 
 public class HashMaps {
 
+	@SuppressWarnings({ "rawtypes", "deprecation" })			//경고메세지를 없애고 싶을 때
 	public static void main(String[] args) {
 		// 해시맵 - 데이터 저장은 느리지만, 많은 양의 데이터 검색시 유리 (해시함수로 난수를 만드는 과정때문에 속도가 느림)
 		// 키와 값으로 데이터를 저장 - 키는 중복X, 값은 중복 허용
@@ -77,6 +79,16 @@ public class HashMaps {
 		else
 			System.out.println("데이터가 없어요");
 		
+		Iterator it3 = hmap2.keySet().iterator();
+		it3.next();
+		
+		Date today = new Date();
+		today.getYear();						//Deprecated - 다음버전 부터 사용되지 않는 기능 경고
+		today.getMonth();
+		today.getDay();
+		today.getHours();
+		today.getMinutes();
+		today.getSeconds();
 	}
 
 }
