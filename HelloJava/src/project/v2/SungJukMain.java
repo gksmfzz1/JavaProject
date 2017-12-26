@@ -124,7 +124,14 @@ public class SungJukMain {
 	}
 
 	private static void deleteSungJuk() {
-		sjsrv.removeSungJuk(0);
+		StringBuffer sb = new StringBuffer();
+		sb.append("\n\n삭제할 성적번호를 입력하세요\n>> ");
+		System.out.println(sb.toString());
+		
+		Scanner sc = new Scanner(System.in);
+		int no = sc.nextInt();
+		
+		sjsrv.removeSungJuk(no);
 	}
 
 	private static void exitSungJuk() {
