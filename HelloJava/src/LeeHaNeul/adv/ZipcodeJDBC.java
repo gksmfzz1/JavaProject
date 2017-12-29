@@ -38,9 +38,9 @@ public class ZipcodeJDBC {
 		
 		List<ZipcodeVO> zclist = new ArrayList<>();
 		
-		
+		ZipcodeVO zip = new ZipcodeVO();
 		while(rs.next()) {
-			ZipcodeVO zip = new ZipcodeVO();
+			
 			zip.set시도(rs.getString("시도"));
 			zip.set시군구(rs.getString("시군구"));
 			zip.set읍면(rs.getString("읍면"));
@@ -51,8 +51,8 @@ public class ZipcodeJDBC {
 			zip.set법정동명(rs.getString("법정동명"));
 			zip.set리명(rs.getString("리명"));
 			zip.set지번본번(rs.getInt("지번본번"));
-			System.out.println(zip);
-		}
+			
+		}System.out.println(zip);
 		
 		
 			
