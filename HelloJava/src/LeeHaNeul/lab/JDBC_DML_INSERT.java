@@ -35,12 +35,5 @@ public class JDBC_DML_INSERT {
 			try{pstmt.close();}catch(Exception ex){}
 			try{conn.close();}catch(Exception ex){}
 		}
-		
-		
-		
-		
-		
-		
 	}
-
 }
