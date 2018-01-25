@@ -61,7 +61,7 @@ for i in range (0,6):
 
 #특정범위내 요소들을 추출할때는 슬라이스 사용 [i:j]
 print(jumin[0:6])       #생년월일
-print(jumin[:6])
+print(jumin[:6])        #6번인덱스까지 출력
 print(jumin[6:])        #생년월일 제외 나머지부분
 print(jumin[:])         #전부출력
 
