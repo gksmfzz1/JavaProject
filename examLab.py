@@ -44,7 +44,7 @@ for i in range(1,10):
         print('파이썬 정말 재밌어요!!.^^')
 
 
-gu = int(input('몇단?'))
 
-for i in range(1,10):
+
+
 
